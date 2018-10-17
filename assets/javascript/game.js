@@ -2,6 +2,8 @@ var music = new Audio("assets/sounds/ghostbusters.mp3");
 var winSound = new Audio("assets/sounds/win.wav");
 var loseSound = new Audio("assets/sounds/lose.wav");
 
+var wordBlanks = document.getElementById("wordBlanks");
+
 let game = {
     words: ['lantern', 'prank', 'costume', 'sweets', 'darkness', 'monster', 'shadows', 'decorations', 'moonlight', 'spiderweb', 'disguise', 'night', 'supernatural', 'October', 'superstition', 'holiday', 'orange', 'party', 'acorn', 'harvest', 'scarecrow', 'autumn', 'hayride', 'squash', 'corn', 'leaves', 'squirrel', 'crow', 'pumpkin', 'bat', 'owl', 'spider', 'bug', 'rat', 'worm', 'cat', 'snake', 'pirate', 'superhero', 'fairy', 'pixie', 'witch', 'ninja', 'princess', 'candy', 'flashlight', 'masks', 'cloak', 'goodies', 'safety', 'doorbell', 'gown', 'hat', 'wigs', 'fangs', 'makeup', 'bogeyman', 'mummy', 'werewolf', 'extraterrestrial', 'mutant', 'witch', 'ghost', 'vampire', 'zombie', 'giant', 'villain', 'goblin', 'warlock', 'Frankenstein', 'Maleficent', 'Beetlejuice', 'Casper', 'Ursula', 'Dracula', 'alarming', 'fear', 'scary', 'bloodcurdling', 'frighten', 'shocking', 'boo', 'goosebumps', 'chilling', 'spooky', 'creepy', 'horrify', 'startling', 'eek', 'nightmare', 'unnerving', 'eerie', 'petrify', 'blood', 'eyeballs', 'heart', 'bones', 'femur', 'skeleton', 'brain', 'fingernails', 'skull', 'cadaver', 'guts', 'apparition', 'ectoplasm', 'phantom', 'cemetery', 'ghastly', 'poltergeist', 'coffin', 'ghoul', 'spectral', 'corpse', 'graveyard', 'spirit', 'crypt', 'spook', 'dead', 'tombstone', 'battling', 'creeping', 'pretending', 'bobbing', 'dancing', 'raking', 'breaking', 'decorating', 'scaring', 'bulging', 'partying', 'slithering', 'bursting', 'dribbling', 'sneaking', 'carving', 'fluttering', 'sparkling', 'crawling', 'grinning', 'tricking', 'bellowing', 'creaking', 'screaming', 'bubbling', 'hooting', 'thumping', 'bumping', 'howling', 'cackling', 'rattling'],
     wins: 0,
@@ -20,7 +22,7 @@ let game = {
         this.updateDisplay();
     },
     updateDisplay: function() {
-        document.getElementById("wordBlanks").innerText = game.blanks.join(" ");
+        wordBlanks.innerText = game.blanks.join(" ");
         document.getElementById("guessesLeft").innerText = game.guessesLeft;
         document.getElementById("lettersGuessed").innerText = game.lettersGuessed.join(", ");
         document.getElementById("wins").innerText = game.wins;
@@ -65,24 +67,15 @@ document.onkeyup = function(event) {
 
     if (game.blanks.join("") == game.word) {
         game.gameOver = true;
-        document.getElementById("wordBlanks").innerText = "You win! Press any letter to play again!";
+        wordBlanks.innerText = "You win! Press any letter to play again!";
         game.wins++;
         winSound.play();
     } 
     
     if (game.guessesLeft == 0) {
         game.gameOver = true;
-        document.getElementById("wordBlanks").innerText = "You Lost! Press any letter to play again. The word was " + game.word + ".";
+        wordBlanks.innerText = "You Lost! Press any letter to play again. The word was " + game.word + ".";
         game.losses++;
         loseSound.play();
     }
 }
-
-/*
-To do:
-
-change all document.getElementById's to variables
-add music
-add sounds for correct letters
-
-*/
