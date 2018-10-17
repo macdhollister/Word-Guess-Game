@@ -28,9 +28,9 @@ document.onkeyup = function(event) {
 
     var letter = event.key.toLowerCase();
 
-    if (letter < 'a' || letter > 'z') {
-        return;
-    }
+    let letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+    if(!letters.includes(letter)) return;
 
     if(game.gameOver) {
         game.resetGame();
@@ -55,16 +55,15 @@ document.onkeyup = function(event) {
 
     if (game.blanks.join("") == game.word) {
         game.gameOver = true;
-        document.getElementById("wordBlanks").innerText = "You win! Press any key to play again!";
+        document.getElementById("wordBlanks").innerText = "You win! Press any letter to play again!";
         game.wins++;
     } 
     
     if (game.guessesLeft == 0) {
         game.gameOver = true;
-        document.getElementById("wordBlanks").innerText = "You Lost! Press any key to play again";
+        document.getElementById("wordBlanks").innerText = "You Lost! Press any letter to play again. The word was " + game.word + ".";
         game.losses++;
     }
-    
 }
 
 /*
