@@ -1,0 +1,73 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../images/stars.gif");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title {
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    font-family: 'Creepster', cursive;
+}
+
+.bodyText {
+    color: white;
+    font-family: 'Eater', cursive;
+    text-align: center;
+}
+
+#guessesLeft {
+    color: white;
+    font-family: 'Eater', cursive;
+    text-align: center;
+    font-size: 50px;
+}
+
+#blanksColumn {
+    height: 200px;
+}
+
+#wordBlanks {
+    color: white;
+    font-family: 'Eater', cursive;
+    text-align: center;
+    font-size: 50px; /* Change to 80px when game starts */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#lettersGuessed {
+    color: white;
+    font-family: 'Eater', cursive;
+    text-align: center;
+    font-size: 30px;
+    word-wrap: break-word;
+}
+
+.stats {
+    color: white;
+    font-family: 'Eater', cursive;
+    text-align: center;
+    font-size: 30px;
+}
+
+#wins {
+    font-size: 50px;
+}
+
+#losses {
+    font-size: 50px;
+}

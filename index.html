@@ -1,0 +1,69 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS/Bootstrap Links  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+
+    <!-- Javascript File -->
+    <script src="assets/javascript/game.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Creepster|Eater" rel="stylesheet">
+</head>
+
+<body class="bg">
+
+    <div class="container">
+        <!-- Title Row With Images  -->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/images/ghost.png" class="img-fluid">
+            </div>
+
+            <div class="col-md-6">
+                <h1 id="title">Halloween Hangman!</h1>
+            </div>
+
+            <div class="col-md-3">
+                <img src="assets/images/witch.png" class="img-fluid">
+            </div>
+        </div>
+
+
+        <!-- Guess Information -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="bodyText">Guesses Remaining</h2>
+                <div id="guessesLeft">10</div>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="bodyText">Letters Guessed:</h2>
+                <div id="lettersGuessed"></div>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="bodyText">Stats:</h2>
+                <div class="stats">Wins: <span id="wins">0</span></div>
+                <div class="stats">Losses: <span id="losses">0</span></div>
+            </div>
+        </div>
+
+        <!-- Word Blanks -->
+        <div class="row" id="blanksColumn">
+            <div class="col">
+                <div id="wordBlanks">Press Any Key to Get Started!</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
