@@ -28,17 +28,11 @@ let game = {
     }
 }
 
-document.onload = function() {
-    music.play();
-}
-
 document.onkeyup = function(event) {
     var letter = event.key.toLowerCase();
 
-    let letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
     // Ensures only alphabetical characters
-    if(!letters.includes(letter)) return;
+    if(event.keyCode < 65 || event.keyCode > 90) return;
 
     if(game.gameOver) {
         game.resetGame();

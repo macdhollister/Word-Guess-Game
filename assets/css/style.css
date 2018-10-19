@@ -43,7 +43,7 @@ body, html {
     color: white;
     font-family: 'Eater', cursive;
     text-align: center;
-    font-size: 50px; /* Change to 80px when game starts */
+    font-size: 50px;
     position: absolute;
     bottom: 0;
     width: 100%;
