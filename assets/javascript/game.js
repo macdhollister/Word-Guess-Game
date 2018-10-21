@@ -32,8 +32,8 @@ document.onkeyup = function(event) {
     var letter = event.key.toLowerCase();
 
     // Ensures only lowercase alphabetical characters
-    if(!/[a-z]/.test(letter)) return;
-
+    if(event.keyCode < 65 || event.keyCode > 90) return;
+    
     if(game.gameOver) {
         game.resetGame();
         game.gameOver = false;
